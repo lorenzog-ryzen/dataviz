@@ -1,0 +1,1413 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title> &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'SQL';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+      <li class="toctree-l1"><a class="reference internal" href="BITCOIN.html">BITCOIN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Imputacion_corregido.html">Imputacion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MAPBOX.html">MAPBOX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SQL.html">SQL</a></li>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FSQL.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/SQL.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"></a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">psycopg2</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+
+<span class="n">dbname</span> <span class="o">=</span> <span class="s1">&#39;lr_luis_db&#39;</span>  
+<span class="n">user</span> <span class="o">=</span> <span class="s1">&#39;lorenzo_luis&#39;</span>  
+<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;password&#39;</span>  
+<span class="n">host</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>  
+<span class="n">port</span> <span class="o">=</span> <span class="s1">&#39;5432&#39;</span>  
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="o">=</span><span class="n">dbname</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">port</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">connection</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="c1">#table_name = &#39;employees&#39;</span>
+    <span class="c1"># Sentencia SQL para eliminar la tabla</span>
+    <span class="c1">#drop_table_query = f&#39;DROP TABLE IF EXISTS {table_name};&#39;</span>
+    <span class="c1">#cursor.execute(drop_table_query)</span>
+
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = &#39;employees&#39;);&quot;</span><span class="p">)</span>
+    <span class="n">table_exists</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tabla existe &quot;</span><span class="p">,</span><span class="n">table_exists</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">table_exists</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CREATING&quot;</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">                       CREATE TABLE employees</span>
+<span class="s1">                       ( employee_id INTEGER</span>
+<span class="s1">                       , first_name VARCHAR(20)</span>
+<span class="s1">                       , last_name VARCHAR(25)</span>
+<span class="s1">                       , email VARCHAR(25)</span>
+<span class="s1">                       , phone_number VARCHAR(20)</span>
+<span class="s1">                       , hire_date DATE</span>
+<span class="s1">                       , job_id VARCHAR(10)</span>
+<span class="s1">                       , salary NUMERIC(8,2)</span>
+<span class="s1">                       , commission_pct NUMERIC(2,2)</span>
+<span class="s1">                       , manager_id INTEGER</span>
+<span class="s1">                       , department_id INTEGER</span>
+<span class="s1">                       ) ;</span>
+<span class="s1">                       CREATE UNIQUE INDEX emp_emp_id_pk</span>
+<span class="s1">                       ON employees (employee_id) ;</span>
+<span class="s1">                       ALTER TABLE employees ADD</span>
+<span class="s1">                       PRIMARY KEY (employee_id);</span>
+<span class="s1">                       &#39;&#39;&#39;</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">                       SELECT * FROM employees LIMIT 10;</span>
+<span class="s1">                       SELECT count(1) FROM employees;</span>
+<span class="s1">                       &#39;&#39;&#39;</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">engine_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;postgresql://</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s1">@</span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">dbname</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">engine_url</span><span class="p">)</span>
+
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM employees;&quot;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+        
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT job_id FROM employees;&quot;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+        
+        
+    
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error al conectar a PostgreSQL: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+   
+    <span class="k">if</span> <span class="n">connection</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;connection object at 0x000001E6A4A23780; dsn: &#39;user=lorenzo_luis password=xxx dbname=lr_luis_db host=localhost port=5432&#39;, closed: 0&gt;
+tabla existe  True
+Empty DataFrame
+Columns: [employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id]
+Index: []
+Empty DataFrame
+Columns: [job_id]
+Index: []
+</pre></div>
+</div>
+</div>
+</div>
+<p>El principio del codigo es la creacion de la conexion con pgadmin:</p>
+<section id="id1">
+<h1><a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>connection = psycopg2.connect(dbname=dbname, user=user, password=password, host=host, port=port)
+cursor = connection.cursor()</p>
+</section>
+<section id="id2">
+<h1><a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
+<p>Luego, se verifica que la no existencia de la base de datos, para no sobreescribir y que se ejecuten errores:</p>
+</section>
+<section id="id3">
+<h1><a class="headerlink" href="#id3" title="Link to this heading">#</a></h1>
+<p>cursor.execute(“SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = ‘employees’);”)
+table_exists = cursor.fetchone()[0]
+if not(table_exists): …</p>
+</section>
+<section id="id4">
+<h1><a class="headerlink" href="#id4" title="Link to this heading">#</a></h1>
+<p>Despues, se ejecuta la siguiente accion:</p>
+</section>
+<section id="id5">
+<h1><a class="headerlink" href="#id5" title="Link to this heading">#</a></h1>
+<p>cursor.execute(‘’’
+CREATE TABLE employees
+( employee_id INTEGER
+, first_name VARCHAR(20)
+, last_name VARCHAR(25)
+, email VARCHAR(25)
+, phone_number VARCHAR(20)
+, hire_date DATE
+, job_id VARCHAR(10)
+, salary NUMERIC(8,2)
+, commission_pct NUMERIC(2,2)
+, manager_id INTEGER
+, department_id INTEGER
+) ;
+CREATE UNIQUE INDEX emp_emp_id_pk
+ON employees (employee_id) ;
+ALTER TABLE employees ADD
+PRIMARY KEY (employee_id);
+‘’’)</p>
+</section>
+<section id="id6">
+<h1><a class="headerlink" href="#id6" title="Link to this heading">#</a></h1>
+<p>Esta parte se encarga de crear una tabla con el nombre  ‘employees’, y crea las siguientes varaibles:
+employee_id, first_name, last_name, email, phone_number , hire_date, job_id, salary …
+en donde al lado de cada nombre de las variables se declara el tipo y la longitud de esta:
+INTEGER para variables discretas.
+VARCHAR para strings.
+DATE para fechas.
+La otra parte de codigo:</p>
+</section>
+<section id="id7">
+<h1><a class="headerlink" href="#id7" title="Link to this heading">#</a></h1>
+<p>CREATE UNIQUE INDEX emp_emp_id_pk
+ON employees (employee_id) ;
+ALTER TABLE employees ADD
+PRIMARY KEY (employee_id);</p>
+</section>
+<section id="id8">
+<h1><a class="headerlink" href="#id8" title="Link to this heading">#</a></h1>
+<p>se encarga de que la variable ‘employee_id’ no repita valores, siendo estos discretos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">psycopg2</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">connection</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="o">=</span><span class="n">dbname</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">port</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;DROP TABLE IF EXISTS courses;&quot;</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39; </span>
+<span class="s1">    CREATE TABLE courses</span>
+<span class="s1">    (</span>
+<span class="s1">        course_id SERIAL PRIMARY KEY,</span>
+<span class="s1">        course_name VARCHAR(60),</span>
+<span class="s1">        course_author VARCHAR(40),</span>
+<span class="s1">        course_status VARCHAR(20),</span>
+<span class="s1">        course_published_dt DATE      </span>
+<span class="s1">    );</span>
+<span class="s1">    </span>
+<span class="s1">    CREATE UNIQUE INDEX crs_crs_id_pk</span>
+<span class="s1">    ON courses (course_id);</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">engine_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;postgresql://</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s1">@</span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">dbname</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">engine_url</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM courses;&quot;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+<span class="n">pprint</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Empty DataFrame
+Columns: [course_id, course_name, course_author, course_status, course_published_dt]
+Index: []
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">inserts</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">):</span>
+    <span class="n">Course_Name</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Course Name:  &quot;</span><span class="p">)</span>
+    <span class="n">Course_author</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Course author:  &quot;</span><span class="p">)</span>
+    <span class="n">Course_status</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Course status:   &quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">Course_status</span><span class="o">!=</span><span class="s2">&quot;draft&quot;</span><span class="p">:</span>
+            <span class="n">Date</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Date :  &quot;</span><span class="p">)</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+<span class="w">                </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">                INSERT INTO courses ( course_name, course_author, course_status, course_published_dt)</span>
+<span class="sd">                VALUES ( %s, %s, %s, %s)</span>
+<span class="sd">                &#39;&#39;&#39;</span><span class="p">,</span>
+                <span class="p">(</span> <span class="n">Course_Name</span><span class="p">,</span> <span class="n">Course_author</span><span class="p">,</span> <span class="n">Course_status</span><span class="p">,</span> <span class="n">Date</span><span class="p">)</span>
+            <span class="p">)</span>
+            
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+<span class="w">                </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">                INSERT INTO courses ( course_name, course_author, course_status, course_published_dt)</span>
+<span class="sd">                VALUES ( %s, %s, %s, %s)</span>
+<span class="sd">                &#39;&#39;&#39;</span><span class="p">,</span>
+                <span class="p">(</span> <span class="n">Course_Name</span><span class="p">,</span> <span class="n">Course_author</span><span class="p">,</span> <span class="n">Course_status</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="p">)</span>
+            
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tudo ben&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error inserting data: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error inserting data: invalid input syntax for type date: &quot;&quot;
+LINE 3:                 VALUES ( &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;)
+                                             ^
+
+Error inserting data: invalid input syntax for type date: &quot;&quot;
+LINE 3:                 VALUES ( &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;)
+                                             ^
+
+Error inserting data: invalid input syntax for type date: &quot;&quot;
+LINE 3:                 VALUES ( &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;)
+                                             ^
+
+Error inserting data: invalid input syntax for type date: &quot;&quot;
+LINE 3:                 VALUES ( &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;)
+                                             ^
+
+Error inserting data: invalid input syntax for type date: &quot;&quot;
+LINE 3:                 VALUES ( &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;)
+                                             ^
+
+Error inserting data: invalid input syntax for type date: &quot;&quot;
+LINE 3:                 VALUES ( &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;)
+                                             ^
+
+Error inserting data: invalid input syntax for type date: &quot;&quot;
+LINE 3:                 VALUES ( &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;)
+                                             ^
+
+Error inserting data: invalid input syntax for type date: &quot;&quot;
+LINE 3:                 VALUES ( &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;)
+                                             ^
+
+Error inserting data: invalid input syntax for type date: &quot;&quot;
+LINE 3:                 VALUES ( &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;)
+                                             ^
+
+Error inserting data: invalid input syntax for type date: &quot;&quot;
+LINE 3:                 VALUES ( &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;)
+                                             ^
+
+Error inserting data: invalid input syntax for type date: &quot;&quot;
+LINE 3:                 VALUES ( &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;)
+                                             ^
+
+Error inserting data: invalid input syntax for type date: &quot;&quot;
+LINE 3:                 VALUES ( &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;)
+                                             ^
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inf</span><span class="o">=</span><span class="p">[</span>
+     
+    <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>    <span class="s2">&quot;Programming using Python&quot;</span><span class="p">,</span>         <span class="s2">&quot;Bob Dillon&quot;</span><span class="p">,</span>     <span class="s2">&quot;published&quot;</span><span class="p">,</span><span class="s2">&quot;2020-09-30&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>    <span class="s2">&quot;Data Engieering using Python&quot;</span><span class="p">,</span>     <span class="s2">&quot;Bob Dillon&quot;</span><span class="p">,</span>     <span class="s2">&quot;published&quot;</span><span class="p">,</span><span class="s2">&quot;2020-07-15&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;3&quot;</span><span class="p">,</span>    <span class="s2">&quot;Data Engineering using Scala&quot;</span><span class="p">,</span>     <span class="s2">&quot;Elvis Presley&quot;</span><span class="p">,</span>  <span class="s2">&quot;draft&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;4&quot;</span><span class="p">,</span>    <span class="s2">&quot;Programming using Scala&quot;</span><span class="p">,</span>          <span class="s2">&quot;Elvis Presley&quot;</span><span class="p">,</span>  <span class="s2">&quot;published&quot;</span><span class="p">,</span><span class="s2">&quot;2020-05-12&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>    <span class="s2">&quot;Programming using Java&quot;</span><span class="p">,</span>           <span class="s2">&quot;Mike Jack&quot;</span><span class="p">,</span>      <span class="s2">&quot;inactive&quot;</span><span class="p">,</span><span class="s2">&quot;2020-08-10&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;6&quot;</span><span class="p">,</span>    <span class="s2">&quot;Web Applications-Python Flask&quot;</span><span class="p">,</span>    <span class="s2">&quot;Bob Dillon&quot;</span><span class="p">,</span>     <span class="s2">&quot;inactive&quot;</span><span class="p">,</span><span class="s2">&quot;2020-07-20&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;7&quot;</span><span class="p">,</span>    <span class="s2">&quot;Web Applications-Java Spring&quot;</span>  <span class="p">,</span>   <span class="s2">&quot;Mike Jack &quot;</span> <span class="p">,</span>    <span class="s2">&quot;draft&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;8&quot;</span>     <span class="s2">&quot;Pipleine Orchestration -Python&quot;</span><span class="p">,</span>   <span class="s2">&quot;Bob Dillon&quot;</span><span class="p">,</span>     <span class="s2">&quot;draft&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;9&quot;</span><span class="p">,</span>    <span class="s2">&quot;Streaming Pipelines-Python&quot;</span><span class="p">,</span>       <span class="s2">&quot;Bob Dillon&quot;</span><span class="p">,</span>     <span class="s2">&quot;published&quot;</span><span class="p">,</span><span class="s2">&quot;2020-09-30&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>   <span class="s2">&quot;Web Applications-Scala Play&quot;</span><span class="p">,</span>      <span class="s2">&quot;Elvis Presley&quot;</span><span class="p">,</span>  <span class="s2">&quot;inactive&quot;</span><span class="p">,</span><span class="s2">&quot;2020-06-23&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;11&quot;</span><span class="p">,</span>   <span class="s2">&quot;Web Applications-Python Django&quot;</span><span class="p">,</span>   <span class="s2">&quot;Bob Dillon&quot;</span><span class="p">,</span>     <span class="s2">&quot;published&quot;</span><span class="p">,</span><span class="s2">&quot;2020-07-05&quot;</span><span class="p">],</span>
+<span class="p">]</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">inf</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;draft&quot;</span><span class="p">:</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+<span class="w">                    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">                    INSERT INTO courses ( course_name, course_author, course_status, course_published_dt)</span>
+<span class="sd">                    VALUES ( %s, %s, %s, %s)</span>
+<span class="sd">                    &#39;&#39;&#39;</span><span class="p">,</span>
+                    <span class="p">(</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="kc">None</span><span class="p">)</span>
+                <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+<span class="w">                    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">                    INSERT INTO courses ( course_name, course_author, course_status, course_published_dt)</span>
+<span class="sd">                    VALUES ( %s, %s, %s, %s)</span>
+<span class="sd">                    &#39;&#39;&#39;</span><span class="p">,</span>
+                    <span class="p">(</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">line</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+                <span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tudo ben&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error inserting data: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tudo ben
+tudo ben
+tudo ben
+tudo ben
+tudo ben
+tudo ben
+tudo ben
+Error inserting data: list index out of range
+tudo ben
+tudo ben
+tudo ben
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">engine_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;postgresql://</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s1">@</span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">dbname</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">engine_url</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM courses;&quot;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+<span class="n">pprint</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    course_id                     course_name  course_author course_status  \
+0           1        Programming using Python     Bob Dillon     published   
+1           2    Data Engieering using Python     Bob Dillon     published   
+2           3    Data Engineering using Scala  Elvis Presley         draft   
+3           4         Programming using Scala  Elvis Presley     published   
+4           5          Programming using Java      Mike Jack      inactive   
+5           6   Web Applications-Python Flask     Bob Dillon      inactive   
+6           7    Web Applications-Java Spring     Mike Jack          draft   
+7           8      Streaming Pipelines-Python     Bob Dillon     published   
+8           9     Web Applications-Scala Play  Elvis Presley      inactive   
+9          10  Web Applications-Python Django     Bob Dillon     published   
+10         11        Programming using Python     Bob Dillon     published   
+11         12    Data Engieering using Python     Bob Dillon     published   
+12         13    Data Engineering using Scala  Elvis Presley         draft   
+13         14         Programming using Scala  Elvis Presley     published   
+14         15          Programming using Java      Mike Jack      inactive   
+15         16   Web Applications-Python Flask     Bob Dillon      inactive   
+16         17    Web Applications-Java Spring     Mike Jack          draft   
+17         18      Streaming Pipelines-Python     Bob Dillon     published   
+18         19     Web Applications-Scala Play  Elvis Presley      inactive   
+19         20  Web Applications-Python Django     Bob Dillon     published   
+
+   course_published_dt  
+0           2020-09-30  
+1           2020-07-15  
+2                 None  
+3           2020-05-12  
+4           2020-08-10  
+5           2020-07-20  
+6                 None  
+7           2020-09-30  
+8           2020-06-23  
+9           2020-07-05  
+10          2020-09-30  
+11          2020-07-15  
+12                None  
+13          2020-05-12  
+14          2020-08-10  
+15          2020-07-20  
+16                None  
+17          2020-09-30  
+18          2020-06-23  
+19          2020-07-05  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;DELETE FROM courses where course_status = &#39;inactive&#39;;&quot;</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">engine_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;postgresql://</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s1">@</span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">dbname</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">engine_url</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM courses;&quot;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>  <span class="c1"># Rollback en caso de error</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error executing SQL query:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    course_id                     course_name  course_author course_status  \
+0           1        Programming using Python     Bob Dillon     published   
+1           2    Data Engieering using Python     Bob Dillon     published   
+2           3    Data Engineering using Scala  Elvis Presley         draft   
+3           4         Programming using Scala  Elvis Presley     published   
+4           7    Web Applications-Java Spring     Mike Jack          draft   
+5           8      Streaming Pipelines-Python     Bob Dillon     published   
+6          10  Web Applications-Python Django     Bob Dillon     published   
+7          11        Programming using Python     Bob Dillon     published   
+8          12    Data Engieering using Python     Bob Dillon     published   
+9          13    Data Engineering using Scala  Elvis Presley         draft   
+10         14         Programming using Scala  Elvis Presley     published   
+11         17    Web Applications-Java Spring     Mike Jack          draft   
+12         18      Streaming Pipelines-Python     Bob Dillon     published   
+13         20  Web Applications-Python Django     Bob Dillon     published   
+
+   course_published_dt  
+0           2020-09-30  
+1           2020-07-15  
+2                 None  
+3           2020-05-12  
+4                 None  
+5           2020-09-30  
+6           2020-07-05  
+7           2020-09-30  
+8           2020-07-15  
+9                 None  
+10          2020-05-12  
+11                None  
+12          2020-09-30  
+13          2020-07-05  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">                SELECT COUNT(DISTINCT course_author) FROM courses;</span>
+<span class="s1">                &#39;&#39;&#39;</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El total de autores distintos es de &quot;</span><span class="p">,</span><span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">engine_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;postgresql://</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s1">@</span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">dbname</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">engine_url</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM courses ORDER by course_author;&quot;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>  
+    
+    
+<span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>  <span class="c1"># Rollback en caso de error</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error executing SQL query:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El total de autores distintos es de  3
+    course_id                     course_name  course_author course_status  \
+0          20  Web Applications-Python Django     Bob Dillon     published   
+1           2    Data Engieering using Python     Bob Dillon     published   
+2           8      Streaming Pipelines-Python     Bob Dillon     published   
+3          10  Web Applications-Python Django     Bob Dillon     published   
+4          11        Programming using Python     Bob Dillon     published   
+5          12    Data Engieering using Python     Bob Dillon     published   
+6          18      Streaming Pipelines-Python     Bob Dillon     published   
+7           1        Programming using Python     Bob Dillon     published   
+8           3    Data Engineering using Scala  Elvis Presley         draft   
+9           4         Programming using Scala  Elvis Presley     published   
+10         13    Data Engineering using Scala  Elvis Presley         draft   
+11         14         Programming using Scala  Elvis Presley     published   
+12          7    Web Applications-Java Spring     Mike Jack          draft   
+13         17    Web Applications-Java Spring     Mike Jack          draft   
+
+   course_published_dt  
+0           2020-07-05  
+1           2020-07-15  
+2           2020-09-30  
+3           2020-07-05  
+4           2020-09-30  
+5           2020-07-15  
+6           2020-09-30  
+7           2020-09-30  
+8                 None  
+9           2020-05-12  
+10                None  
+11          2020-05-12  
+12                None  
+13                None  
+</pre></div>
+</div>
+</div>
+</div>
+<p>VI)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dbname</span> <span class="o">=</span> <span class="s1">&#39;lr_luis_db&#39;</span>  
+<span class="n">user</span> <span class="o">=</span> <span class="s1">&#39;lorenzo_luis&#39;</span>  
+<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;password&#39;</span>  
+<span class="n">host</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>  
+<span class="n">port</span> <span class="o">=</span> <span class="s1">&#39;5432&#39;</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">psycopg2</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="n">connection</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="o">=</span><span class="n">dbname</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">port</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;DROP TABLE IF EXISTS users;&quot;</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">               CREATE TABLE users(</span>
+<span class="s1">                    user_id SERIAL PRIMARY KEY,</span>
+<span class="s1">                    user_first_name VARCHAR(30),</span>
+<span class="s1">                    user_last_name VARCHAR(30),</span>
+<span class="s1">                    user_email_id VARCHAR(50),</span>
+<span class="s1">                    user_gender VARCHAR(1),</span>
+<span class="s1">                    user_unique_id VARCHAR(15),</span>
+<span class="s1">                    user_phone_no VARCHAR(20),</span>
+<span class="s1">                    user_dob DATE,</span>
+<span class="s1">                    created_ts TIMESTAMP</span>
+<span class="s1">                )</span>
+<span class="s1">               &#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">               INSERT INTO users (</span>
+<span class="s1">    user_first_name, user_last_name, user_email_id, user_gender, </span>
+<span class="s1">    user_unique_id, user_phone_no, user_dob, created_ts</span>
+<span class="s1">) VALUES</span>
+<span class="s1">    (&#39;Giuseppe&#39;, &#39;Bode&#39;, &#39;gbode0@imgur.com&#39;, &#39;M&#39;, &#39;88833-8759&#39;, </span>
+<span class="s1">     &#39;+86 (764) 443-1967&#39;, &#39;1973-05-31&#39;, &#39;2018-04-15 12:13:38&#39;),</span>
+<span class="s1">    (&#39;Lexy&#39;, &#39;Gisbey&#39;, &#39;lgisbey1@mail.ru&#39;, &#39;F&#39;, &#39;262501-029&#39;, </span>
+<span class="s1">     &#39;+86 (751) 160-3742&#39;, &#39;2003-05-31&#39;, &#39;2020-12-29 06:44:09&#39;),</span>
+<span class="s1">    (&#39;Karel&#39;, &#39;Claringbold&#39;, &#39;kclaringbold2@yale.edu&#39;, &#39;F&#39;, &#39;391-33-2823&#39;, </span>
+<span class="s1">     &#39;+62 (445) 471-2682&#39;, &#39;1985-11-28&#39;, &#39;2018-11-19 00:04:08&#39;),</span>
+<span class="s1">    (&#39;Marv&#39;, &#39;Tanswill&#39;, &#39;mtanswill3@dedecms.com&#39;, &#39;F&#39;, &#39;1195413-80&#39;, </span>
+<span class="s1">     &#39;+62 (497) 736-6802&#39;, &#39;1998-05-24&#39;, &#39;2018-11-19 16:29:43&#39;),</span>
+<span class="s1">    (&#39;Gertie&#39;, &#39;Espinoza&#39;, &#39;gespinoza4@nationalgeographic.com&#39;, &#39;M&#39;, &#39;471-24-6869&#39;, </span>
+<span class="s1">     &#39;+249 (687) 506-2960&#39;, &#39;1997-10-30&#39;, &#39;2020-01-25 21:31:10&#39;),</span>
+<span class="s1">    (&#39;Saleem&#39;, &#39;Danneil&#39;, &#39;sdanneil5@guardian.co.uk&#39;, &#39;F&#39;, &#39;192374-933&#39;, </span>
+<span class="s1">     &#39;+63 (810) 321-0331&#39;, &#39;1992-03-08&#39;, &#39;2020-11-07 19:01:14&#39;),</span>
+<span class="s1">    (&#39;Rickert&#39;, &#39;O&#39;&#39;Shiels&#39;, &#39;roshiels6@wikispaces.com&#39;, &#39;M&#39;, &#39;749-27-47-52&#39;, </span>
+<span class="s1">     &#39;+86 (184) 759-3933&#39;, &#39;1972-11-01&#39;, &#39;2018-03-20 10:53:24&#39;),</span>
+<span class="s1">    (&#39;Cybil&#39;, &#39;Lissimore&#39;, &#39;clissimore7@pinterest.com&#39;, &#39;M&#39;, &#39;461-75-4198&#39;, </span>
+<span class="s1">     &#39;+54 (613) 939-6976&#39;, &#39;1978-03-03&#39;, &#39;2019-12-09 14:08:30&#39;),</span>
+<span class="s1">    (&#39;Melita&#39;, &#39;Rimington&#39;, &#39;mrimington8@mozilla.org&#39;, &#39;F&#39;, &#39;892-36-676-2&#39;, </span>
+<span class="s1">     &#39;+48 (322) 829-8638&#39;, &#39;1995-12-15&#39;, &#39;2018-04-03 04:21:33&#39;),</span>
+<span class="s1">    (&#39;Benetta&#39;, &#39;Nana&#39;, &#39;bnana9@google.com&#39;, &#39;M&#39;, &#39;197-54-1646&#39;, </span>
+<span class="s1">     &#39;+420 (934) 611-0020&#39;, &#39;1971-12-07&#39;, &#39;2018-10-17 21:02:51&#39;),</span>
+<span class="s1">    (&#39;Gregorius&#39;, &#39;Gullane&#39;, &#39;ggullanea@prnewswire.com&#39;, &#39;F&#39;, &#39;232-55-52-58&#39;, </span>
+<span class="s1">     &#39;+62 (780) 859-1578&#39;, &#39;1973-09-18&#39;, &#39;2020-01-14 23:38:53&#39;),</span>
+<span class="s1">    (&#39;Una&#39;, &#39;Glayzer&#39;, &#39;uglayzerb@pinterest.com&#39;, &#39;M&#39;, &#39;898-84-336-6&#39;, </span>
+<span class="s1">     &#39;+380 (840) 437-3981&#39;, &#39;1983-05-26&#39;, &#39;2019-09-17 03:24:21&#39;),</span>
+<span class="s1">    (&#39;Jamie&#39;, &#39;Vosper&#39;, &#39;jvosperc@umich.edu&#39;, &#39;M&#39;, &#39;247-95-68-44&#39;, </span>
+<span class="s1">     &#39;+81 (205) 723-1942&#39;, &#39;1972-03-18&#39;, &#39;2020-07-23 16:39:33&#39;),</span>
+<span class="s1">    (&#39;Calley&#39;, &#39;Tilson&#39;, &#39;ctilsond@issuu.com&#39;, &#39;F&#39;, &#39;415-48-894-3&#39;, </span>
+<span class="s1">     &#39;+229 (698) 777-4904&#39;, &#39;1987-06-12&#39;, &#39;2020-06-05 12:10:50&#39;),</span>
+<span class="s1">    (&#39;Peadar&#39;, &#39;Gregorowicz&#39;, &#39;pgregorowicze@omniture.com&#39;, &#39;M&#39;, &#39;403-39-5-869&#39;, </span>
+<span class="s1">     &#39;+7 (267) 853-3262&#39;, &#39;1996-09-21&#39;, &#39;2018-05-29 23:51:31&#39;),</span>
+<span class="s1">    (&#39;Jeanie&#39;, &#39;Webling&#39;, &#39;jweblingf@booking.com&#39;, &#39;F&#39;, &#39;399-83-05-03&#39;, </span>
+<span class="s1">     &#39;+351 (684) 413-0550&#39;, &#39;1994-12-27&#39;, &#39;2018-02-09 01:31:11&#39;),</span>
+<span class="s1">    (&#39;Yankee&#39;, &#39;Jelf&#39;, &#39;yjelfg@wufoo.com&#39;, &#39;F&#39;, &#39;607-99-0411&#39;, </span>
+<span class="s1">     &#39;+1 (864) 112-7432&#39;, &#39;1988-11-13&#39;, &#39;2019-09-16 16:09:12&#39;),</span>
+<span class="s1">    (&#39;Blair&#39;, &#39;Aumerle&#39;, &#39;baumerleh@toplist.cz&#39;, &#39;F&#39;, &#39;430-01-578-5&#39;, </span>
+<span class="s1">     &#39;+7 (393) 232-1860&#39;, &#39;1979-11-09&#39;, &#39;2018-10-28 19:25:35&#39;),</span>
+<span class="s1">    (&#39;Pavlov&#39;, &#39;Steljes&#39;, &#39;psteljesi@macromedia.com&#39;, &#39;F&#39;, &#39;571-09-6181&#39;, </span>
+<span class="s1">     &#39;+598 (877) 881-3236&#39;, &#39;1991-06-24&#39;, &#39;2020-09-18 05:34:31&#39;),</span>
+<span class="s1">    (&#39;Darn&#39;, &#39;Hadeke&#39;, &#39;dhadekej@last.fm&#39;, &#39;M&#39;, &#39;478-32-02-87&#39;, </span>
+<span class="s1">     &#39;+370 (347) 110-4270&#39;, &#39;1984-09-04&#39;, &#39;2018-02-10 12:56:00&#39;),</span>
+<span class="s1">    (&#39;Wendell&#39;, &#39;Spanton&#39;, &#39;wspantonk@de.vu&#39;, &#39;F&#39;, null, </span>
+<span class="s1">     &#39;+84 (301) 762-1316&#39;, &#39;1973-07-24&#39;, &#39;2018-01-30 01:20:11&#39;),</span>
+<span class="s1">    (&#39;Carlo&#39;, &#39;Yearby&#39;, &#39;cyearbyl@comcast.net&#39;, &#39;F&#39;, null, </span>
+<span class="s1">     &#39;+55 (288) 623-4067&#39;, &#39;1974-11-11&#39;, &#39;2018-06-24 03:18:40&#39;),</span>
+<span class="s1">    (&#39;Sheila&#39;, &#39;Evitts&#39;, &#39;sevittsm@webmd.com&#39;, null, &#39;830-40-5287&#39;,</span>
+<span class="s1">     null, &#39;1977-03-01&#39;, &#39;2020-07-20 09:59:41&#39;),</span>
+<span class="s1">    (&#39;Sianna&#39;, &#39;Lowdham&#39;, &#39;slowdhamn@stanford.edu&#39;, null, &#39;778-0845&#39;, </span>
+<span class="s1">     null, &#39;1985-12-23&#39;, &#39;2018-06-29 02:42:49&#39;),</span>
+<span class="s1">    (&#39;Phylys&#39;, &#39;Aslie&#39;, &#39;paslieo@qq.com&#39;, &#39;M&#39;, &#39;368-44-4478&#39;, </span>
+<span class="s1">     &#39;+86 (765) 152-8654&#39;, &#39;1984-03-22&#39;, &#39;2019-10-01 01:34:28&#39;)</span>
+<span class="s1">               &#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">engine_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;postgresql://</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s1">@</span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">dbname</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">engine_url</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM users;&quot;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">user_first_name</span><span class="p">[</span><span class="mi">24</span><span class="p">])</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Phylys
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">                SELECT EXTRACT(YEAR FROM user_dob) as year, COUNT(*) as count_years</span>
+<span class="s1">                FROM users</span>
+<span class="s1">                GROUP BY year</span>
+<span class="s1">                ORDER BY year DESC;</span>
+<span class="s1">                &#39;&#39;&#39;</span><span class="p">)</span>
+    
+    <span class="n">dicc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;created_year&quot;</span><span class="p">:[],</span><span class="s2">&quot;user_count&quot;</span><span class="p">:[]}</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;created_year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dicc</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">dataframe</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>  <span class="c1"># Rollback en caso de error</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error executing SQL query:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>   
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   created_year  user_count
+0          2003           1
+1          1998           1
+2          1997           1
+3          1996           1
+4          1995           1
+5          1994           1
+6          1992           1
+7          1991           1
+8          1988           1
+9          1987           1
+10         1985           2
+11         1984           2
+12         1983           1
+13         1979           1
+14         1978           1
+15         1977           1
+16         1974           1
+17         1973           3
+18         1972           2
+19         1971           1
+</pre></div>
+</div>
+</div>
+</div>
+<p>XIII)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">                SELECT user_id, user_dob, user_email_id, </span>
+<span class="s1">                        TO_CHAR(user_dob, &#39;Dy&#39;) as day</span>
+<span class="s1">                FROM users</span>
+<span class="s1">                WHERE EXTRACT(MONTH FROM user_dob) = 5</span>
+<span class="s1">                ORDER BY user_dob ;</span>
+<span class="s1">                &#39;&#39;&#39;</span><span class="p">)</span>
+    
+    <span class="n">dicc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;user_id&quot;</span><span class="p">:[],</span>
+          <span class="s2">&quot;user_dob&quot;</span><span class="p">:[],</span>
+          <span class="s2">&quot;user_email&quot;</span><span class="p">:[],</span>
+          <span class="s2">&quot;user_day_of_birth&quot;</span><span class="p">:[]}</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_dob&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_email&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_day_of_birth&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dicc</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">dataframe</span><span class="p">)</span>
+    
+        
+<span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>  <span class="c1"># Rollback en caso de error</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error executing SQL query:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>   
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   user_id    user_dob               user_email user_day_of_birth
+0        1  1973-05-31         gbode0@imgur.com               Thu
+1       12  1983-05-26  uglayzerb@pinterest.com               Thu
+2        4  1998-05-24   mtanswill3@dedecms.com               Sun
+3        2  2003-05-31         lgisbey1@mail.ru               Sat
+</pre></div>
+</div>
+</div>
+</div>
+<p>IX)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">                SELECT user_id, user_email_id, created_ts, </span>
+<span class="s1">                       user_first_name || &#39; &#39; || user_last_name as user_name,</span>
+<span class="s1">                       EXTRACT(YEAR FROM created_ts) AS year</span>
+<span class="s1">                FROM users</span>
+<span class="s1">                WHERE EXTRACT(YEAR FROM created_ts) = 2019</span>
+<span class="s1">                ORDER BY user_name ;</span>
+<span class="s1">                &#39;&#39;&#39;</span><span class="p">)</span>
+    
+    <span class="n">dicc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;user_id&quot;</span><span class="p">:[],</span>
+          <span class="s2">&quot;user_name&quot;</span><span class="p">:[],</span>
+          <span class="s2">&quot;user_email&quot;</span><span class="p">:[],</span>
+          <span class="s2">&quot;created_ts&quot;</span><span class="p">:[],</span>
+          <span class="s2">&quot;created_year&quot;</span><span class="p">:[]}</span>
+    
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
+        
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_email&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;created_ts&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;created_year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+        
+    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dicc</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">dataframe</span><span class="p">)</span>
+    
+        
+<span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>  <span class="c1"># Rollback en caso de error</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error executing SQL query:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>   
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   user_id        user_name                 user_email          created_ts  \
+0        8  Cybil Lissimore  clissimore7@pinterest.com 2019-12-09 14:08:30   
+1       25     Phylys Aslie             paslieo@qq.com 2019-10-01 01:34:28   
+2       12      Una Glayzer    uglayzerb@pinterest.com 2019-09-17 03:24:21   
+3       17      Yankee Jelf           yjelfg@wufoo.com 2019-09-16 16:09:12   
+
+  created_year  
+0         2019  
+1         2019  
+2         2019  
+3         2019  
+</pre></div>
+</div>
+</div>
+</div>
+<p>X)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">                SELECT user_gender as genres, COUNT(*) as user_count</span>
+<span class="s1">                FROM users</span>
+<span class="s1">                GROUP BY genres</span>
+<span class="s1">                ORDER BY user_count DESC;</span>
+<span class="s1">                &#39;&#39;&#39;</span><span class="p">)</span>
+    
+    <span class="n">dicc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;user_gender&quot;</span><span class="p">:[],</span>
+          <span class="s2">&quot;user_count&quot;</span><span class="p">:[]}</span>
+    
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
+        
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_gender&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Male&quot;</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;M&quot;</span> <span class="k">else</span> <span class="p">(</span><span class="s2">&quot;Female&quot;</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;F&quot;</span> <span class="k">else</span> <span class="s2">&quot;Not specified&quot;</span><span class="p">))</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+        
+    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dicc</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">dataframe</span><span class="p">)</span>
+    
+        
+<span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>  <span class="c1"># Rollback en caso de error</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error executing SQL query:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>   
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     user_gender  user_count
+0         Female          13
+1           Male          10
+2  Not specified           2
+</pre></div>
+</div>
+</div>
+</div>
+<p>XI)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">                SELECT user_id,  user_unique_id ,RIGHT(user_unique_id, 4) AS last_four_digits</span>
+<span class="s1">                FROM users</span>
+<span class="s1">                &#39;&#39;&#39;</span><span class="p">)</span>
+    
+    <span class="n">dicc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;user_id&quot;</span><span class="p">:[],</span>
+          <span class="s2">&quot;user_unique_id&quot;</span><span class="p">:[],</span>
+          <span class="s2">&quot;user_unique_id_last_4&quot;</span><span class="p">:[]}</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
+        
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_unique_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_unique_id_last_4&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dicc</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">dataframe</span><span class="p">)</span>      
+<span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>  <span class="c1"># Rollback en caso de error</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error executing SQL query:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>   
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    user_id user_unique_id user_unique_id_last_4
+0         1     88833-8759                  8759
+1         2     262501-029                  -029
+2         3    391-33-2823                  2823
+3         4     1195413-80                  3-80
+4         5    471-24-6869                  6869
+5         6     192374-933                  -933
+6         7   749-27-47-52                  7-52
+7         8    461-75-4198                  4198
+8         9   892-36-676-2                  76-2
+9        10    197-54-1646                  1646
+10       11   232-55-52-58                  2-58
+11       12   898-84-336-6                  36-6
+12       13   247-95-68-44                  8-44
+13       14   415-48-894-3                  94-3
+14       15   403-39-5-869                  -869
+15       16   399-83-05-03                  5-03
+16       17    607-99-0411                  0411
+17       18   430-01-578-5                  78-5
+18       19    571-09-6181                  6181
+19       20   478-32-02-87                  2-87
+20       21           None                  None
+21       22           None                  None
+22       23    830-40-5287                  5287
+23       24       778-0845                  0845
+24       25    368-44-4478                  4478
+</pre></div>
+</div>
+</div>
+</div>
+<p>XII)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">                SELECT LEFT(user_phone_no,3) as three_digits, COUNT(*) as user_count</span>
+<span class="s1">                FROM users</span>
+<span class="s1">                GROUP BY three_digits</span>
+<span class="s1">                ORDER BY user_count;</span>
+<span class="s1">                &#39;&#39;&#39;</span><span class="p">)</span>
+    
+    <span class="n">dicc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;cpuntry_code&quot;</span><span class="p">:[],</span>
+          <span class="s2">&quot;user_count&quot;</span><span class="p">:[]}</span>
+    
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
+
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;country_code&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">!=</span><span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span> <span class="p">)</span>
+        <span class="n">dicc</span><span class="p">[</span><span class="s2">&quot;user_count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+        
+    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dicc</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">dataframe</span><span class="p">)</span>
+    
+        
+<span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>  <span class="c1"># Rollback en caso de error</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error executing SQL query:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   user_gender  user_count
+0           22           1
+1           81           1
+2           1            1
+3           37           1
+4           63           1
+5           84           1
+6           55           1
+7           38           1
+8           24           1
+9           54           1
+10          35           1
+11          42           1
+12          59           1
+13          48           1
+14          7            2
+15        None           2
+16          62           3
+17          86           4
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"></a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
